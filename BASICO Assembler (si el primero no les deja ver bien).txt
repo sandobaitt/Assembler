@@ -140,19 +140,19 @@
 
             ; Atajos que el ensamblador expande en el codigo. NUnca se usa la instrucción CALL con ellas
 
-            print 'texto': Imprime una cadena en la posicion actual.
-            printn 'texto': Igual que PRINT, pero añade un salto de linea automatico.
-            putc char: Imprime un solo caracter (puede ser un registro como dl o una constante).
-            gotoxy col, fila: Mueve el cursor a coordenadas especificas.
-            clear_screen: Borra toda la pantalla de la consola. ESTE ES EL UNICO QUE SE DEFINE AL FINAL COMO LOS PROCEDIMIENTOS
+            print 'texto': Imprime una cadena en la posicion actual
+            printn 'texto': Igual que PRINT, pero añade un salto de linea automatico
+            putc char: Imprime un solo caracter (puede ser un registro como dl o una constante)
+            gotoxy col, fila: Mueve el cursor a coordenadas especificas
 
         ; Procedimientos:
 
             ; Bloques de codigo mas complejos que viven al final del programa. SIEMPRE se usan con CALL para ejecutarlos y se definen al final del archivo
 
-            scan_num: Lee un número del teclado y lo guarda en el registro cx.
-            print_num: Imprime el valor numerico contenido en el registro ax.
-            print_num_uns: Igual que el anterior, pero para numeros sin signo.
+            scan_num: Lee un número del teclado y lo guarda en el registro cx
+            print_num: Imprime el valor numerico contenido en el registro ax
+            print_num_uns: Igual que el anterior, pero para numeros sin signo
+            clear_screen: Borra toda la pantalla de la consola
 
         ; Para definir procedimientos o clear_screen, por ejemplo
         ; Se lo hace debajo de la interrupcion del final del codigo
@@ -216,7 +216,7 @@
     ;Vectores con valores: Se definen separando valores por comas
     precios db 10, 20, 30, 40 ; Crea una lista de 4 bytes contiguos
 
-    ;Vecotres vacios
+    ;Vectores vacios
     vector2 db 10 dup(?) ;Crea 10 espacios de 1 byte cada uno sin valor inicial
 
     ;Cadenas de texto: Se encierran en comillas
