@@ -22,10 +22,10 @@
 
         ; PRO TIPS:
 
-        ; Para pasar de minuscula a MAYUSCULA: Resto 32 o 20h en hexa (sub al, 32 o sub al, 20h)
-        ; Para pasar de MAYUSCULA a minuscula: Sumo 32 o 20h en hexa (add al, 32 o add al, 20h)
-        ; De Caracter ASCII a Valor Numerico: Resto 48 o 30h en hexa (sub al, 48 o sub al, 30h)
-        ; De Valor Numerico a Caracter ASCII: Sumo 48 o 30h en hexa (add al, 48 o add al, 30h)
+        ; Para pasar de minuscula a MAYUSCULA: Resto 32d en decimal o 20h en hexa (sub al, 32 o sub al, 20h)
+        ; Para pasar de MAYUSCULA a minuscula: Sumo 32d en decimal o 20h en hexa (add al, 32 o add al, 20h)
+        ; De Caracter ASCII a Valor Numerico: Resto 48d en decimal o 30h en hexa (sub al, 48 o sub al, 30h)
+        ; De Valor Numerico a Caracter ASCII: Sumo 48d en decimal o 30h en hexa (add al, 48 o add al, 30h)
 
     == Registros ==
 
@@ -155,15 +155,15 @@
             printn 'texto': Igual que PRINT, pero añade un salto de linea automatico.
             putc char: Imprime un solo caracter (puede ser un registro como dl o una constante).
             gotoxy col, fila: Mueve el cursor a coordenadas especificas.
-            clear_screen: Borra toda la pantalla de la consola. ESTE ES EL UNICO QUE SE DEFINE AL FINAL COMO LOS PROCEDIMIENTOS
 
         ; Procedimientos:
 
             ; Bloques de codigo mas complejos que viven al final del programa. SIEMPRE se usan con CALL para ejecutarlos y se definen al final del archivo
 
-            scan_num: Lee un número del teclado y lo guarda en el registro cx.
-            print_num: Imprime el valor numerico contenido en el registro ax.
-            print_num_uns: Igual que el anterior, pero para numeros sin signo.
+            scan_num: Lee un número del teclado y lo guarda en el registro cx
+            print_num: Imprime el valor numerico contenido en el registro ax
+            print_num_uns: Igual que el anterior, pero para numeros sin signo
+            clear_screen: Borra toda la pantalla de la consola
 
         ; Para definir procedimientos o clear_screen, por ejemplo
         ; Se lo hace debajo de la interrupcion del final del codigo
@@ -234,7 +234,7 @@
     ;Vectores con valores: Se definen separando valores por comas
     precios db 10, 20, 30, 40 ; Crea una lista de 4 bytes contiguos
 
-    ;Vecotres vacios
+    ;Vectores vacios
     vector2 db 10 dup(?) ;Crea 10 espacios de 1 byte cada uno sin valor inicial
 
     ;Cadenas de texto: Se encierran en comillas
