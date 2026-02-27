@@ -7,13 +7,11 @@ Este repositorio contiene una guía completa de fundamentos de lenguaje ensambla
 * En la carpeta `/Guia` se encuentra la guia resuelta (Mariano)
 * En la carpeta `/Finales` se encuentran resoluciones de exámenes finales (Paula y Sando)
 
----
 
 ## 🛠️ Herramientas Utilizadas
 * **emu8086:** Emulador y editor para la arquitectura 8086.
 * **Librería `emu8086.inc`:** Utilizada para simplificar tareas de impresión y lectura mediante macros.
 
----
 
 ## 🚀 Contenido del Repositorio
 * **Fundamentos:** Explicación de registros, manejo de memoria y banderas.
@@ -23,7 +21,6 @@ Este repositorio contiene una guía completa de fundamentos de lenguaje ensambla
 * **Control de Flujo:** Implementación de bucles (LOOP), saltos condicionales y etiquetas.
 * **Interrupciones:** Manejo de la interrupción `21h` para entrada/salida de caracteres y cadenas.
 
----
 
 ## 👥 Autores
 * **Mariano Del Valle**
