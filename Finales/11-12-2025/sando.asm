@@ -6,34 +6,38 @@ include 'emu8086.inc'
 
     caracter db ?
 .code
-
+    
+    ; Inicializo segmento de datos
     mov dx, @DATA   
-    mov ds , dx
-    xor dx,dx
+    mov ds , dx 
+    
     xor cx, cx
     xor ax, ax
     
-    ; primero que ingrese el caracter
-    printn 'Ingrese un caracter'
+    ; Primero que ingrese el caracter
+    print 'Ingrese un caracter: '
+    
     mov ah, 01h
     int 21h
-    mov caracter, al  ; muevo el caracter a la variable creada
+    mov caracter, al  ; Muevo el caracter a la variable creada
+    
     printn ' '
     
-    ; que ingrese la cadena hasta que llegue el enter
+    ; Que ingrese la cadena hasta que llegue el enter
     printn 'Vaya ingresando una cadena de caracteres y termine con ENTER'
     
     cadena:
     
         mov ah, 01h
         int 21h
-        cmp al, 13d
+        
+        cmp al, 13d   ; Comparo con 13d que es un ENTER
         je muestro
         
         cmp al, caracter
         jne cadena
         
-    match:  ; Si llego aca, es porque al, es igual a caracter
+    match:
     
         inc cx
         jmp cadena
@@ -41,11 +45,12 @@ include 'emu8086.inc'
     muestro:
         
         call clear_screen
+        xor ax, ax
         mov ax, cx
         print 'La cantidad que se registro con ese caracter es: '
         call print_num
         
-    mov ax, 4ch
+    mov ah, 4ch
     int 21h
     
     define_print_num
