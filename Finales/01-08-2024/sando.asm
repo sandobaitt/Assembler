@@ -12,7 +12,7 @@ include 'emu8086.inc'
     mov dx, @data
     mov ds, dx
     
-    ; Inicializo indices para vectores y cargo cx
+    ; Inicializo indices para vectores
     xor si, si
     xor di, di
     
